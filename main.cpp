@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 17:51:21 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 18:21:49 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 18:41:09 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,8 @@ int				main(void)
 			loop = 0;
 		window->clear();
 		ponyta->run(window->e);
-		SDL_RenderPresent(window->get_render());
 	}
-	delete window;
 	delete ponyta;
+	delete window;
 	return (0);
 }

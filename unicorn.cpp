@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 20:13:09 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 18:12:02 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 18:36:07 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	Unicorn::run(SDL_Event& event)
 		{
 			Character::pos.get_x() += 3;
 			this->print();
+			SDL_RenderPresent(this->render);
 		}
 		if (event.key.keysym.sym == SDLK_a)
 			this->attack();

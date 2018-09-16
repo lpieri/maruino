@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:19:16 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 16:59:29 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 18:31:14 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ Display::Display(std::string const & title, int x, int y) : _loop(1)
 
 Display::~Display(void)
 {
+	SDL_DestroyRenderer(this->_rend);
+	SDL_DestroyWindow(this->_win);
+	SDL_Quit();
 	return ;
 }
 
