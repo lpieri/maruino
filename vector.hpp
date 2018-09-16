@@ -6,7 +6,7 @@
 /*   By: clementpieri <cpieri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 11:24:30 by cpieri            #+#    #+#             */
-/*   Updated: 2018/08/30 20:10:34 by clementpier      ###   ########.fr       */
+/*   Updated: 2018/09/16 17:33:42 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,16 @@
 class Vector2d
 {
 	private:
-		int		_y;
 		int		_x;
+		int		_y;
 
 	public:
-		Vector2d(void);
+		Vector2d(int x, int y);
 		~Vector2d(void);
 
-		int			set_vector(int x, int y);
-		int			get_val_x(void) const;
-		int			get_val_y(void) const;
-		Vector2d	get_vector(void) const;
+		void		set_vector(int x, int y);
+		int&		get_x(void);
+		int&		get_y(void);
 };
 
 #endif

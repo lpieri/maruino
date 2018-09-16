@@ -3,28 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   world.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cpieri <cpieri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/16 17:11:06 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 17:29:54 by cpieri           ###   ########.fr       */
+/*   Created: 2018/08/23 10:13:22 by cpieri            #+#    #+#             */
+/*   Updated: 2018/08/30 21:27:14 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	__WORLD_HPP__
 # define __WORLD_HPP__
 
-class	World
+# include "map.hpp"
+# include "perso.hpp"
+
+class World
 {
-	protected:
-		int const	len;
-		int*		map;
-		int			difficulty;
+	private:
+		double const	_gravity;
+		int				_check_gravity(void);
+		int				_check_collision(void);
 
 	public:
+		Perso	perso;
+		Map		maps;
+
 		World(void);
 		~World(void);
 
-		void		generate_map(int const difficulty);
-}
+		void	print(void);
+};
 
 #endif

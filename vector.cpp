@@ -6,13 +6,13 @@
 /*   By: clementpieri <cpieri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 11:28:02 by cpieri            #+#    #+#             */
-/*   Updated: 2018/08/30 20:10:25 by clementpier      ###   ########.fr       */
+/*   Updated: 2018/09/16 17:34:10 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.hpp"
 
-Vector2d::Vector2d(void) : _x(0), _y(0)
+Vector2d::Vector2d(int x, int y) : _x(x), _y(y)
 {
 	return ;
 }
@@ -22,23 +22,18 @@ Vector2d::~Vector2d(void)
 	return ;
 }
 
-int		Vector2d::get_val_x(void) const
+int&		Vector2d::get_x(void)
 {
 	return this->_x;
 }
 
-int		Vector2d::get_val_y(void) const
+int&		Vector2d::get_y(void)
 {
 	return this->_y;
 }
 
-int		Vector2d::set_vector(int x, int y)
+void		Vector2d::set_vector(int x, int y)
 {
-	if (x > 0 && y > 0)
-	{
-		this->_x = x;
-		this->_y = y;
-		return 1;
-	}
-	return 0;
+	this->_x = x;
+	this->_y = y;
 }
