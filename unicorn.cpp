@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 20:13:09 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 18:36:07 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 19:56:08 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Unicorn::~Unicorn(void)
 	return ;
 }
 
-void	Unicorn::sayHello(void) const
+void	Unicorn::sayHello(void)
 {
 	std::cout << "Hello I'm a Ponyta" << std::endl;
 	return ;
@@ -65,11 +65,10 @@ void	Unicorn::attack(void)
 void	Unicorn::run(SDL_Event& event)
 {
 	if (event.type == SDL_KEYDOWN)
-		if (event.key.keysym.sym == SDLK_LEFT)
+		if (event.key.keysym.sym == SDLK_RIGHT)
 		{
 			Character::pos.get_x() += 3;
 			this->print();
-			SDL_RenderPresent(this->render);
 		}
 		if (event.key.keysym.sym == SDLK_a)
 			this->attack();

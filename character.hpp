@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 17:22:51 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 18:22:36 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 19:54:25 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class	Character
 		~Character(void);
 
 		void			set_render_alias(SDL_Renderer* render);
+		virtual	void	moveBack(void);
 		virtual void	sayHello(void);
 		virtual void	attack(void);
 		virtual void	run(SDL_Event& event);

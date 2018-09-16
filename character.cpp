@@ -6,7 +6,7 @@
 /*   By: cpieri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 17:25:20 by cpieri            #+#    #+#             */
-/*   Updated: 2018/09/16 18:22:48 by cpieri           ###   ########.fr       */
+/*   Updated: 2018/09/16 19:57:03 by cpieri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ void	Character::jump(void)
 }
 
 void	Character::print(void)
+{
+	return ;
+}
+
+void	Character::moveBack(void)
 {
 	return ;
 }
