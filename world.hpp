@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   game.hpp                                         .::    .:/ .      .::   */
+/*   world.hpp                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/21 12:48:17 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:15:51 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/09/29 15:30:42 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef	__GAME_HPP__
-# define __GAME_HPP__
+#ifndef __WORLD_HPP__
+# define __WORLD_HPP__
 
-# include <Gamebuino-Meta.h>
-# include "vector2d.hpp"
-# include "character.hpp"
-# include "world.hpp"
-# include "unicorn.hpp"
 # include "map.hpp"
+# include "character.hpp"
+# include <Gamebuino-Meta.h>
+
+class World
+{
+	private:
+		int const	_gravity;
+		Character*	_character;
+		Map* 		_maps;
+
+		void		_set_gravity(void);
+		void		_check_colision(void);
+
+	public:
+		World(Character* character, Map* maps);
+		~World(void);
+
+		void	add_physical(void);
+};
 
 #endif

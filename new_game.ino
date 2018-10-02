@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/21 16:10:44 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/09/29 15:34:32 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,7 @@ Image DirtI = Image(DirtData);
 
 Map*		maps = new Map(DirtI);
 Character*	pedro = new Unicorn(UnicornI);
+World*		earth = new World(pedro, maps);
 
 void setup() {
 	gb.begin();
@@ -37,4 +38,5 @@ void loop() {
 		pedro->moveBack(maps->getStarterMap());
 	maps->print();
 	pedro->print();
+	earth->add_physical();
 }

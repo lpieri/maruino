@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   game.hpp                                         .::    .:/ .      .::   */
+/*   world.cpp                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/21 12:48:17 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:15:51 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/09/29 15:30:18 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef	__GAME_HPP__
-# define __GAME_HPP__
-
-# include <Gamebuino-Meta.h>
-# include "vector2d.hpp"
-# include "character.hpp"
 # include "world.hpp"
-# include "unicorn.hpp"
-# include "map.hpp"
 
-#endif
+World::World(Character* character, Map* maps) : _character(character), _maps(maps), _gravity(10)
+{
+	return ;
+}
+
+World::~World(void)
+{
+	return ;
+}
+
+void	World::_set_gravity(void)
+{
+	gb.display.print(this->_character->get_posY() + this->_gravity);
+	return ;
+}
+
+void	World::_check_colision(void)
+{
+	return ;
+}
+
+void	World::add_physical(void)
+{
+	this->_set_gravity();
+	this->_check_colision();
+	return ;
+}
