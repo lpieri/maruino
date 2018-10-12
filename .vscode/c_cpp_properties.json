@@ -5,7 +5,7 @@
             "includePath": [
                 "/Users/bocal/Library/Arduino15/packages/gamebuino/hardware/samd/1.2.1/**",
                 "/Users/bocal/Library/Arduino15/packages/arduino/tools/**",
-				"/Users/bocal/Library/Arduino15/packages/arduino/hardware/samd/1.6.19/**"
+                "/Users/bocal/Library/Arduino15/packages/arduino/hardware/samd/1.6.19/**"
             ],
             "forcedInclude": [
                 "/Users/bocal/Library/Arduino15/packages/gamebuino/hardware/samd/1.2.1/cores/arduino/Arduino.h"
@@ -13,7 +13,7 @@
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
-			],
+            ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17"

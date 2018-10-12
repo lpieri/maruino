@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   world.cpp                                        .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:30:18 by delay       ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   world.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpieri <cpieri@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/29 14:10:16 by delay             #+#    #+#             */
+/*   Updated: 2018/10/12 14:56:59 by cpieri           ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 # include "world.hpp"
 
@@ -26,6 +26,7 @@ World::~World(void)
 void	World::_set_gravity(void)
 {
 	gb.display.print(this->_character->get_posY() + this->_gravity);
+	this->_character->get_posY() += this->_gravity;
 	return ;
 }
 
