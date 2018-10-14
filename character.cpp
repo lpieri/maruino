@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:27:07 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 16:15:00 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,6 +43,7 @@ void	Character::moveBack(int& map_starter)
 
 void	Character::jump(void)
 {
+	this->pos.getY() -= 20;
 	return ;
 }
 
@@ -64,4 +65,9 @@ int&	Character::get_posY(void)
 int&	Character::get_posX(void)
 {
 	return this->pos.getX();
+}
+
+int		Character::getFoot(void)
+{
+	return this->pos.getY() + this->size.getY();
 }

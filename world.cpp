@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   world.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cpieri <cpieri@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/29 14:10:16 by delay             #+#    #+#             */
-/*   Updated: 2018/10/12 14:56:59 by cpieri           ###   ########.fr       */
-/*                                                                            */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   world.cpp                                        .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/12 19:00:27 by delay       ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
 /* ************************************************************************** */
-
 
 # include "world.hpp"
 
@@ -25,19 +25,20 @@ World::~World(void)
 
 void	World::_set_gravity(void)
 {
-	gb.display.print(this->_character->get_posY() + this->_gravity);
+	// gb.display.print(this->_character->get_posY() + this->_gravity);
 	this->_character->get_posY() += this->_gravity;
 	return ;
 }
 
 void	World::_check_colision(void)
 {
+	if (this->_character->getFoot() != this->_maps->getEarth())
+		this->_set_gravity();
 	return ;
 }
 
 void	World::add_physical(void)
 {
-	this->_set_gravity();
 	this->_check_colision();
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:34:32 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 16:12:38 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,6 +36,8 @@ void loop() {
 		pedro->run(maps->getStarterMap());
 	if (gb.buttons.repeat(BUTTON_LEFT, 1))
 		pedro->moveBack(maps->getStarterMap());
+	if (gb.buttons.pressed(BUTTON_A))
+		pedro->jump();
 	maps->print();
 	pedro->print();
 	earth->add_physical();

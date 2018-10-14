@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 15:23:11 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 18:53:10 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,6 +37,7 @@ class Character
 		virtual void	print(void);
 		int&			get_posX(void);
 		int&			get_posY(void);
+		int				getFoot(void);
 };
 
 #endif

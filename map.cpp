@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/21 16:07:55 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 18:53:50 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -50,4 +50,9 @@ void	Map::print(void)
 int&	Map::getStarterMap(void)
 {
 	return this->_starter;
+}
+
+int		Map::getEarth(void)
+{
+	return this->_pos.getY();
 }
