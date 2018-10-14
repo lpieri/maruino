@@ -6,14 +6,14 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 19:00:27 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 16:58:15 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 # include "world.hpp"
 
-World::World(Character* character, Map* maps) : _character(character), _maps(maps), _gravity(10)
+World::World(Character* character, Map* maps) : _character(character), _maps(maps), _gravity(1)
 {
 	return ;
 }

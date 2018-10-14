@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/14 16:12:38 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 17:07:16 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,9 +32,10 @@ void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
+	gb.display.print(maps->getStarterMap());
+	if (gb.buttons.repeat(BUTTON_RIGHT, 8))
 		pedro->run(maps->getStarterMap());
-	if (gb.buttons.repeat(BUTTON_LEFT, 1))
+	if (gb.buttons.repeat(BUTTON_LEFT, 8))
 		pedro->moveBack(maps->getStarterMap());
 	if (gb.buttons.pressed(BUTTON_A))
 		pedro->jump();

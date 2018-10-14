@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/21 16:16:36 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 16:44:38 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,5 +51,6 @@ void	Unicorn::moveBack(int& map_starter)
 {
 	if (Character::pos.getX() > 0)
 		Character::pos.getX() -= this->speed;
-	map_starter -= this->speed;
+	if (map_starter > 0)
+		map_starter -= this->speed;
 }
