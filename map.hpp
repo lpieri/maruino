@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 11:43:37 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 16:56:28 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,8 +15,8 @@
 # define __MAP_HPP__
 
 # include "vector2d.hpp"
+# include "macro.hpp"
 # include <Gamebuino-Meta.h>
-
 
 class Map
 {
