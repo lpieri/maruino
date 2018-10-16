@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 18:53:10 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 11:42:14 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,10 +20,11 @@
 class Character
 {
 	protected:
-		Vector2d	pos;
-		Vector2d	size;
-		int const	damages;
-		int const	speed;
+		Vector2d	_pos;
+		Vector2d	_size;
+		Vector2d 	_world_pos;
+		int const	_damages;
+		int const	_speed;
 
 	public:
 		Character(int sizeX, int sizeY);
@@ -38,6 +39,8 @@ class Character
 		int&			get_posX(void);
 		int&			get_posY(void);
 		int				getFoot(void);
+		int				getWorldPosX(void);
+		int				getWorldPosY(void);
 };
 
 #endif

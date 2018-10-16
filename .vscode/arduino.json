@@ -1,5 +1,5 @@
 {
     "board": "gamebuino:samd:gamebuino_meta_native",
     "sketch": "new_game.ino",
-    "port": "/dev/cu.usbmodem141201"
+    "port": "/dev/cu.usbmodem1411"
 }

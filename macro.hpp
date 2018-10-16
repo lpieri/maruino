@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   unicorn.hpp                                      .::    .:/ .      .::   */
+/*   macro.hpp                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/21 12:37:59 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 10:48:03 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/15 15:56:05 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/15 16:10:14 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef __UNICORN_HPP__
-# define __UNICORN_HPP__
+#ifndef __MACRO_HPP__
+# define __MACRO_HPP__
 
-# include "character.hpp"
-# include "macro.hpp"
-// # include "image.hpp"
+/*
+**	Screen Macro
+*/
 
-class Unicorn : public Character
-{
-	private:
-		Image&			_skin;
-		int const		_damages;
-		int const		_speed;
+# define WIDTH		80
+# define HEIGHT		64
 
-	public:
-		Unicorn(Image& image);
-		~Unicorn(void);
+/*
+**	World Macro
+*/
 
-		void	sayHello(void) const;
-		void	print(void);
-		void	run(int& map_starter);
-		void	moveBack(int& map_starter);
-};
+# define GRAVITY	1
+
+/*
+**	Map Macro
+*/
+
+# define S_BLOCK_X	10
+# define S_BLOCK_Y	10
 
 #endif
