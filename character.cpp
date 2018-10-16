@@ -6,14 +6,14 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 11:43:15 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 16:23:43 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "character.hpp"
 
-Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2), _speed(1), _pos(0, 0), _world_pos(0, 0)
+Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2), _speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true), _is_fall(true)
 {
 	return ;
 }
@@ -43,7 +43,13 @@ void	Character::moveBack(int& map_starter)
 
 void	Character::jump(void)
 {
-	this->_pos.getY() -= 8;
+	if (this->_is_fall == true)
+	{
+		this->_is_run = true;
+		this->_is_move_back = true;
+		this->_pos.getY() -= 15;
+		this->_is_fall = false;
+	}
 	return ;
 }
 
@@ -80,4 +86,19 @@ int		Character::getWorldPosX(void)
 int		Character::getWorldPosY(void)
 {
 	return this->_world_pos.getY();
+}
+
+bool&	Character::getIsRun(void)
+{
+	return this->_is_run;
+}
+
+bool&	Character::getIsMoveBack(void)
+{
+	return this->_is_move_back;
+}
+
+bool&	Character::getIsFall(void)
+{
+	return this->_is_fall;
 }

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 12:07:21 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 16:05:33 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,23 +44,29 @@ void	Unicorn::run(int& map_starter)
 {
 	int		posX = (Character::_pos.getX() + Character::_size.getX());
 
-	if (posX < (WIDTH / 2))
+	if (Character::_is_run == true)
 	{
-		Character::_pos.getX() += this->_speed + S_BLOCK_X;
-		Character::_world_pos.getX() += this->_speed;
-	}
-	else if (map_starter < 101 && posX >= (WIDTH / 2))
-	{
-		Character::_world_pos.getX() += this->_speed;
-		map_starter += this->_speed;
+		if (posX < (WIDTH / 2))
+		{
+			Character::_pos.getX() += this->_speed + S_BLOCK_X;
+			Character::_world_pos.getX() += this->_speed;
+		}
+		else if (map_starter < 101 && posX >= (WIDTH / 2))
+		{
+			Character::_world_pos.getX() += this->_speed;
+			map_starter += this->_speed;
+		}
 	}
 }
 
 void	Unicorn::moveBack(int& map_starter)
 {
-	if (Character::_world_pos.getX() > map_starter)
+	if (Character::_is_move_back == true)
 	{
-		Character::_pos.getX() -= this->_speed + S_BLOCK_X;
-		Character::_world_pos.getX() -= this->_speed;
+		if (Character::_world_pos.getX() > map_starter)
+		{
+			Character::_pos.getX() -= this->_speed + S_BLOCK_X;
+			Character::_world_pos.getX() -= this->_speed;
+		}
 	}
 }

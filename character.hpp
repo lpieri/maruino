@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 11:42:14 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 16:04:51 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,6 +25,9 @@ class Character
 		Vector2d 	_world_pos;
 		int const	_damages;
 		int const	_speed;
+		bool		_is_run;
+		bool		_is_move_back;
+		bool		_is_fall;
 
 	public:
 		Character(int sizeX, int sizeY);
@@ -41,6 +44,9 @@ class Character
 		int				getFoot(void);
 		int				getWorldPosX(void);
 		int				getWorldPosY(void);
+		bool&			getIsFall(void);
+		bool&			getIsRun(void);
+		bool&			getIsMoveBack(void);
 };
 
 #endif
