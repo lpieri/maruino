@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 11:25:25 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 12:07:21 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,7 +36,7 @@ void	Unicorn::print(void)
 	int		sizeX = Character::_size.getX();
 	int		sizeY = Character::_size.getY();
 
-	x += (sizeX / 2) - (8 / 2);
+	// x += (sizeX / 2) - (8 / 2);
 	gb.display.drawImage(x, y, this->_skin, sizeX, sizeY);
 }
 

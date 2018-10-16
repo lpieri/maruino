@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 11:45:46 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 12:14:43 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ Map::Map(Image& dirt) : _len(101), _size(10, 10), _skin(dirt), _pos(0, 0), _star
 	while (i < this->_len)
 	{
 		this->_map[i] = 0;
-		if (i % 2 == 0)
+		if (i % 10 == 0)
 			this->_map[i] = 1;
 		i++;
 	}
@@ -46,7 +46,7 @@ int		Map::getEarth(int character_pos)
 
 void	Map::print(void)
 {
-	int		i = (this->_starter > 4) ? (this->_starter - 4) : 0;
+	int		i = this->_starter;
 	int		x = 0;
 	int		y = this->getEarth(i);
 	int&	sizeX = this->_size.getX();
