@@ -6,14 +6,14 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 10:34:31 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 12:23:15 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "character.hpp"
 
-Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2), _speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true), _is_fall(true)
+Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2), _speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true), _is_fall(true), _life(3)
 {
 	return ;
 }
@@ -61,6 +61,11 @@ void	Character::print(void)
 void	Character::attack(void)
 {
 	return ;
+}
+
+int&	Character::getLife(void)
+{
+	return this->_pos.getY();
 }
 
 int&	Character::get_posY(void)

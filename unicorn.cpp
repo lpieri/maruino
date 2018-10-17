@@ -6,14 +6,18 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 16:05:33 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 15:15:27 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "unicorn.hpp"
 
-Unicorn::Unicorn(Image& image) : _skin(image), _speed(1), _damages(10), Character(8, 8)
+Image UnicornI = Image(UnicornData);
+Image dead_heart = Image(dead_heartData);
+Image heart = Image(heartData);
+
+Unicorn::Unicorn(void) : _speed(1), _damages(10), Character(8, 8)
 {
 }
 
@@ -35,9 +39,17 @@ void	Unicorn::print(void)
 	int		y = Character::_pos.getY();
 	int		sizeX = Character::_size.getX();
 	int		sizeY = Character::_size.getY();
+	int		life = Character::_life;
+	int		i = 0;
+	int		hx = WIDTH - S_HEART;
 
-	// x += (sizeX / 2) - (8 / 2);
-	gb.display.drawImage(x, y, this->_skin, sizeX, sizeY);
+	gb.display.drawImage(x, y, UnicornI, sizeX, sizeY);
+	while (i < life)
+	{
+		gb.display.drawImage(hx, 0, heart, S_HEART, S_HEART);
+		hx -= S_HEART + 2;
+		i++;
+	}
 }
 
 void	Unicorn::run(int& map_starter)

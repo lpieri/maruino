@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 16:56:28 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 11:35:57 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,9 @@
 
 # include "vector2d.hpp"
 # include "macro.hpp"
+# include "image.hpp"
 # include <Gamebuino-Meta.h>
+
 
 class Map
 {
@@ -25,11 +27,10 @@ class Map
 		int const	_len;
 		Vector2d	_size;
 		Vector2d	_pos;
-		Image&		_skin;
 		int*		_map;
 
 	public:
-		Map(Image& dirt);
+		Map(void);
 		~Map(void);
 
 		void	print(void);

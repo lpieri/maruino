@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 10:33:46 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 12:23:00 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,6 +23,7 @@ class Character
 		Vector2d	_pos;
 		Vector2d	_size;
 		Vector2d 	_world_pos;
+		int			_life;
 		int const	_damages;
 		int const	_speed;
 		bool		_is_run;
@@ -39,6 +40,7 @@ class Character
 		virtual void	jump(void);
 		virtual void	sayHello(void) const;
 		virtual void	print(void);
+		int&			getLife(void);
 		int&			get_posX(void);
 		int&			get_posY(void);
 		int				getFoot(void);

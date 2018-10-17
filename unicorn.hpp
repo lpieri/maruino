@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:37:59 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 10:48:03 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 11:37:54 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,17 +16,16 @@
 
 # include "character.hpp"
 # include "macro.hpp"
-// # include "image.hpp"
+# include "image.hpp"
 
 class Unicorn : public Character
 {
 	private:
-		Image&			_skin;
 		int const		_damages;
 		int const		_speed;
 
 	public:
-		Unicorn(Image& image);
+		Unicorn(void);
 		~Unicorn(void);
 
 		void	sayHello(void) const;
