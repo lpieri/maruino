@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 10:05:10 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 10:28:54 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,6 +34,7 @@ class World
 
 		void	print_sky(void) const;
 		void	add_physical(void);
+		void	restart_game(void);
 };
 
 #endif

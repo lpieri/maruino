@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 10:17:47 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 10:34:53 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -70,4 +70,15 @@ void	World::add_physical(void)
 void	World::print_sky(void) const
 {
 	gb.display.drawImage(0, 0, skyImage, WIDTH, HEIGHT);
+}
+
+void	World::restart_game(void)
+{
+	this->_maps->getStarterMap() = 0;
+	this->_character->get_posX() = 0;
+	this->_character->get_posY() = 0;
+	this->_character->setWorldPosX(0);
+	this->_character->getIsFall() = true;
+	this->_character->getIsRun() = true;
+	this->_character->getIsMoveBack() = true;
 }

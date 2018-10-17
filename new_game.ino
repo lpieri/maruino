@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 10:19:40 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 10:32:28 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,6 +38,8 @@ void loop() {
 		pedro->moveBack(maps->getStarterMap());
 	if (gb.buttons.pressed(BUTTON_A))
 		pedro->jump();
+	if (gb.buttons.pressed(BUTTON_MENU))
+		earth->restart_game();
 	earth->print_sky();
 	maps->print();
 	pedro->print();
