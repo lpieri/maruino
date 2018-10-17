@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 16:31:52 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 10:19:40 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,15 +32,13 @@ void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	// gb.display.print(gb.display.width());
-	// gb.display.print(gb.display.height());
-	// gb.display.print(maps->getStarterMap());
-	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
+	if (gb.buttons.repeat(BUTTON_RIGHT, 2))
 		pedro->run(maps->getStarterMap());
-	if (gb.buttons.repeat(BUTTON_LEFT, 1))
+	if (gb.buttons.repeat(BUTTON_LEFT, 2))
 		pedro->moveBack(maps->getStarterMap());
 	if (gb.buttons.pressed(BUTTON_A))
 		pedro->jump();
+	earth->print_sky();
 	maps->print();
 	pedro->print();
 	earth->add_physical();
