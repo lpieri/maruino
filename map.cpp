@@ -6,28 +6,20 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 15:12:00 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 11:23:28 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "map.hpp"
+#include "level.hpp"
 
 Image earth_2 = Image(earth_2Data);
 Image DirtI = Image(DirtData);
 
 Map::Map(void) : _len(101), _size(S_BLOCK_X, S_BLOCK_Y), _pos(0, 0), _starter(0)
 {
-	int		i = 0;
-
-	this->_map = new int[this->_len];
-	while (i < this->_len)
-	{
-		this->_map[i] = 0;
-		if (i % 10 == 0)
-			this->_map[i] = -2;
-		i++;
-	}
+	this->_map = level1[1];
 	this->_pos.setVector2d(0, gb.display.height() - this->_size.getY());
 }
 

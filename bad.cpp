@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   macro.hpp                                        .::    .:/ .      .::   */
+/*   bad.cpp                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/15 15:56:05 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 11:40:41 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/18 09:30:37 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/18 11:34:14 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef __MACRO_HPP__
-# define __MACRO_HPP__
+#include "bad.hpp"
 
-/*
-**	Screen Macro
-*/
+Image badImage = Image(badData);
 
-# define WIDTH		80
-# define HEIGHT		64
-# define S_LE101	35
+Bad::Bad(void) : _pos(0, 0), _world_pos(0, 0), _life(10)
+{
+	return ;
+}
 
-/*
-**	World Macro
-*/
+Bad::~Bad(void)
+{
+	return ;
+}
 
-# define GRAVITY	1
-
-/*
-**	Map Macro
-*/
-
-# define S_BLOCK_X	10
-# define S_BLOCK_Y	10
-# define LEN_MAP	101
-
-/*
-**	Character Macro
-*/
-
-# define S_HEART	11
-# define ALL_LIFE	3
-# define S_BAD		10
-
-
-#endif
+void	Bad::print(void)
+{
+	// gb.display.drawImage(this->_pos.getX(), this->_pos.getY(), badImage, S_BAD, S_BAD);
+	return ;
+}

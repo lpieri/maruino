@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:48:17 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 15:58:03 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 10:18:06 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,5 +21,6 @@
 # include "unicorn.hpp"
 # include "map.hpp"
 # include "macro.hpp"
+# include "bad.hpp"
 
 #endif

@@ -6,12 +6,13 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 08:51:38 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 13:31:29 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 # include "world.hpp"
+# include "level.hpp"
 
 Image skyImage = Image(skyData);
 Image le101 = Image(schoolData);
@@ -142,4 +143,28 @@ void	World::_game_over(void)
 	}
 	this->_character->getLife() = 3;
 	this->restart_game();
+}
+
+int		World::_count_bad(int const * level)
+{
+	int		i;
+	int		bad;
+
+	i = 0;
+	bad = 0;
+	while (i < LEN_MAP)
+	{
+		if (level[i] == 1)
+			bad++;
+		i++;
+	}
+	return (bad);
+}
+
+void	World::add_bad(void)
+{
+	int const *	level = level1[0];
+	int			bad = _count_bad(level);
+
+	gb.display.print(bad);
 }

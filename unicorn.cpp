@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 08:33:25 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 09:21:42 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,7 +44,6 @@ void	Unicorn::print(void)
 	int		hx = WIDTH - S_HEART;
 
 	gb.display.drawImage(x, y, UnicornI, sizeX, sizeY);
-	gb.display.print(life);
 	while (i < life)
 	{
 		gb.display.drawImage(hx, 0, heart, S_HEART, S_HEART);

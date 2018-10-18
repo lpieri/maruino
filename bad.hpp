@@ -1,46 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   world.hpp                                        .::    .:/ .      .::   */
+/*   bad.hpp                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 13:31:50 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/18 09:31:03 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/18 10:19:51 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef __WORLD_HPP__
-# define __WORLD_HPP__
+#ifndef	__BAD_HPP__
+# define __BAD_HPP__
 
-# include "map.hpp"
-# include "character.hpp"
+# include "macro.hpp"
 # include "image.hpp"
-# include <Gamebuino-Meta.h>
+# include "vector2d.hpp"
 
-class World
+class Bad
 {
 	private:
-		int const	_gravity;
-		Character*	_character;
-		Map* 		_maps;
-
-		void		_set_gravity(void);
-		void		_check_colision(void);
-		void		_game_over(void);
-		int			_count_bad(int const * level);
+		Vector2d	_pos;
+		Vector2d	_world_pos;
+		int			_life;
 
 	public:
-		World(Character* character, Map* maps);
-		~World(void);
+		Bad(void);
+		~Bad(void);
 
-		void	print_sky(void) const;
-		void	add_physical(void);
-		void	restart_game(void);
-		void	check_end(void);
-		void	start_game(void);
-		void	add_bad(void);
+		void		print(void);
 };
 
 #endif

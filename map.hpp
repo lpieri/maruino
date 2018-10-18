@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 11:35:57 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 13:30:12 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,7 +27,7 @@ class Map
 		int const	_len;
 		Vector2d	_size;
 		Vector2d	_pos;
-		int*		_map;
+		int const *	_map;
 
 	public:
 		Map(void);
