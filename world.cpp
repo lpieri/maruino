@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 15:16:28 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 08:51:38 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -95,6 +95,8 @@ void	World::check_end(void)
 			this->_character->getLife() -= 1;
 			this->restart_game();
 		}
+		else if (this->_character->getLife() == 0)
+			this->_game_over();
 	}
 }
 
@@ -116,4 +118,28 @@ void	World::start_game(void)
 				iloop = false;
 		}
 	}
+}
+
+void	World::_game_over(void)
+{
+	int		centerX;
+	int		centerY;
+	bool	iloop;
+
+	iloop = true;
+	centerX = (WIDTH / 2) - (S_LE101 / 2);
+	centerY = (HEIGHT / 2) - (S_LE101 / 2);
+	gb.display.clear();
+	gb.display.setFontSize(1);
+	gb.display.setCursor(centerX, centerY);
+	gb.display.print("GAME OVER !!!");
+	while (iloop)
+	{
+		while (!gb.update()){
+			if (gb.buttons.pressed(BUTTON_A))
+				iloop = false;
+		}
+	}
+	this->_character->getLife() = 3;
+	this->restart_game();
 }

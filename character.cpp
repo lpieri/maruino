@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 12:23:15 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 08:35:14 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -65,7 +65,7 @@ void	Character::attack(void)
 
 int&	Character::getLife(void)
 {
-	return this->_pos.getY();
+	return this->_life;
 }
 
 int&	Character::get_posY(void)

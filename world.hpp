@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 14:22:25 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/18 08:37:12 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,6 +28,7 @@ class World
 
 		void		_set_gravity(void);
 		void		_check_colision(void);
+		void		_game_over(void);
 
 	public:
 		World(Character* character, Map* maps);
