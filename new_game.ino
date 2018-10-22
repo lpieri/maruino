@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 14:38:31 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 11:54:41 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,7 +37,7 @@ void loop() {
 	earth->print_sky();
 	maps->print();
 	pedro->print();
-	earth->add_bad();
+	earth->bad_print();
 	earth->add_physical();
 	earth->check_end();
 }

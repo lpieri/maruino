@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 14:43:41 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 11:34:58 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,6 @@
 #include "unicorn.hpp"
 
 Image UnicornI = Image(UnicornData);
-Image dead_heart = Image(dead_heartData);
 Image heart = Image(heartData);
 
 Unicorn::Unicorn(void) : _speed(1), _damages(10), Character(8, 8)

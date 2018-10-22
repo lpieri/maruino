@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/18 09:31:03 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 10:19:51 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 11:02:56 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,6 +30,12 @@ class Bad
 		~Bad(void);
 
 		void		print(void);
+		void		setWorldPos(int x, int y);
+		void		setPos(int x, int y);
+		int			getWorldPosX(void);
+		int			getWorldPosY(void);
+		int			getPosX(void);
+		int			getPosY(void);
 };
 
 #endif
