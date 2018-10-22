@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 15:18:18 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 16:19:18 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -84,14 +84,42 @@ void	World::restart_game(void)
 	this->_character->getIsMoveBack() = true;
 }
 
+void	World::_happy_end(void)
+{
+	char 	text[] = "Winner";
+	size_t length = sizeof(text) / sizeof(*text);
+	uint8_t	w;
+	uint8_t h;
+	bool	iloop;
+
+	iloop = true;
+	gb.display.setFontSize(1);
+	w = gb.display.getFontWidth();
+	h = gb.display.getFontHeight();
+	gb.display.clear();
+	gb.display.setCursor(.5 * (WIDTH - (w * length)), .5 * (HEIGHT - h));
+	gb.display.print(text);
+	while (iloop)
+	{
+		while (!gb.update()){
+			if (gb.buttons.pressed(BUTTON_A))
+				iloop = false;
+		}
+	}
+	this->_character->getLife() = 3;
+	this->restart_game();
+}
+
 void	World::check_end(void)
 {
 	int		character_foot;
 	int		the_bad;
 	bool	bad;
+	bool	flag;
 
 	character_foot = this->_character->getFoot();
 	bad = this->_maps->checkBadExist(this->_character->getWorldPosX());
+	flag = this->_maps->checkFlagExist(this->_character->getWorldPosX());
 	the_bad = this->_maps->getEarth(this->_character->getWorldPosX()) - S_BAD;
 	if (character_foot >= HEIGHT || (bad && character_foot >= the_bad))
 	{
@@ -103,21 +131,25 @@ void	World::check_end(void)
 		else if (this->_character->getLife() == 0)
 			this->_game_over();
 	}
+	if (flag)
+		this->_happy_end();
 }
 
 void	World::_game_over(void)
 {
-	int		centerX;
-	int		centerY;
+	char 	text[] = "GAME-OVER !!! ";
+	size_t length = sizeof(text) / sizeof(*text);
+	uint8_t	w;
+	uint8_t h;
 	bool	iloop;
 
 	iloop = true;
-	centerX = (WIDTH / 2) - (S_LE101 / 2);
-	centerY = (HEIGHT / 2) - (S_LE101 / 2);
-	gb.display.clear();
 	gb.display.setFontSize(1);
-	gb.display.setCursor(centerX, centerY);
-	gb.display.print("GAME OVER !!!");
+	w = gb.display.getFontWidth();
+	h = gb.display.getFontHeight();
+	gb.display.clear();
+	gb.display.setCursor(.5 * (WIDTH - (w * length)), .5 * (HEIGHT - h));
+	gb.display.print(text);
 	while (iloop)
 	{
 		while (!gb.update()){

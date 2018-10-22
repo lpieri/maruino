@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 14:15:29 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 15:29:38 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,6 +38,7 @@ class Map
 		int&	getStarterMap(void);
 		int		getEarth(int character_pos);
 		bool	checkBadExist(int character_pos);
+		bool	checkFlagExist(int character_pos);
 };
 
 #endif
