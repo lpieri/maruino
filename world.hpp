@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 14:01:21 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 15:18:03 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,10 +32,6 @@ class World
 		void		_set_gravity(void);
 		void		_check_colision(void);
 		void		_game_over(void);
-		// int			_count_bad(int const * level);
-		// void		_init_bad(int const * level);
-		// void		_add_bad(void);
-
 
 	public:
 		World(Character* character, Map* maps);
@@ -46,7 +42,6 @@ class World
 		void	restart_game(void);
 		void	check_end(void);
 		void	start_game(void);
-		// void	bad_print(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 14:27:55 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/22 15:18:18 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -129,60 +129,6 @@ void	World::_game_over(void)
 	this->restart_game();
 }
 
-// int		World::_count_bad(int const * level)
-// {
-// 	int		i;
-// 	int		bad;
-
-// 	i = 0;
-// 	bad = 0;
-// 	while (i < LEN_MAP)
-// 	{
-// 		if (level[i] == 1)
-// 			bad++;
-// 		i++;
-// 	}
-// 	return (bad);
-// }
-
-// void	World::_init_bad(int const * level)
-// {
-// 	int 	pos_x = 0;
-// 	int 	pos_y = 0;
-
-// 	for (int i = 0; i < this->_nb_bad; i++)
-// 	{
-// 		for (int count_pos_x = this->_character->getWorldPosX(); count_pos_x < LEN_MAP; count_pos_x++)
-// 		{
-// 			if (level[count_pos_x] == 1)
-// 			{
-// 				pos_x = S_BLOCK_X * (count_pos_x - this->_character->getWorldPosX());
-// 				pos_y = this->_maps->getEarth(count_pos_x);
-// 				this->_the_bad[i].setWorldPos(count_pos_x, 0);
-// 				this->_the_bad[i].setPos(pos_x, pos_y);
-// 				this->_the_bad[i].print();
-// 				break;
-// 			}
-// 		}
-// 	}
-// }
-
-// void	World::_add_bad(void)
-// {
-// 	int const *	level = level1[0];
-
-// 	this->_nb_bad = _count_bad(level);
-// 	this->_the_bad = new Bad[this->_nb_bad];
-// 	_init_bad(level);
-// }
-
-// void	World::bad_print(void)
-// {
-// 	int const *	level = level1[0];
-
-// 	_init_bad(level);
-// }
-
 void	World::start_game(void)
 {
 	int		centerX;
@@ -192,7 +138,6 @@ void	World::start_game(void)
 	iloop = true;
 	centerX = (WIDTH / 2) - (S_LE101 / 2);
 	centerY = (HEIGHT / 2) - (S_LE101 / 2);
-	// this->_add_bad();
 	gb.display.clear(WHITE);
 	gb.display.drawImage(centerX, centerY, le101, S_LE101, S_LE101);
 	while (iloop)
