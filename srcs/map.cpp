@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 15:54:34 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/24 17:09:39 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,7 +38,9 @@ int&	Map::getStarterMap(void)
 
 int		Map::getEarth(int character_pos)
 {
-	return (gb.display.height() - this->_size.getY() - (this->_map[character_pos] * this->_size.getY()));
+	int const	earth = HEIGHT - S_BLOCK_Y - (this->_map[character_pos] * S_BLOCK_Y);
+
+	return (earth);
 }
 
 bool	Map::checkBadExist(int character_pos)

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/18 09:30:37 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 14:04:57 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/24 16:55:05 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,7 +28,6 @@ Bad::~Bad(void)
 void	Bad::print(void)
 {
 	gb.display.print(this->_pos.getX());
-	// gb.display.drawImage(this->_pos.getX(), this->_pos.getY(), badImage, S_BAD, S_BAD);
 	return ;
 }
 

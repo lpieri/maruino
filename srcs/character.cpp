@@ -6,14 +6,16 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/18 08:35:14 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/24 16:52:38 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "character.hpp"
 
-Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2), _speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true), _is_fall(true), _life(3)
+Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2),
+	_speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true),
+	_is_fall(true), _life(3)
 {
 	return ;
 }
@@ -60,56 +62,5 @@ void	Character::print(void)
 
 void	Character::attack(void)
 {
-	return ;
-}
-
-int&	Character::getLife(void)
-{
-	return this->_life;
-}
-
-int&	Character::get_posY(void)
-{
-	return this->_pos.getY();
-}
-
-int&	Character::get_posX(void)
-{
-	return this->_pos.getX();
-}
-
-int		Character::getFoot(void)
-{
-	return this->_pos.getY() + this->_size.getY();
-}
-
-int		Character::getWorldPosX(void)
-{
-	return this->_world_pos.getX();
-}
-
-int		Character::getWorldPosY(void)
-{
-	return this->_world_pos.getY();
-}
-
-bool&	Character::getIsRun(void)
-{
-	return this->_is_run;
-}
-
-bool&	Character::getIsMoveBack(void)
-{
-	return this->_is_move_back;
-}
-
-bool&	Character::getIsFall(void)
-{
-	return this->_is_fall;
-}
-
-void	Character::setWorldPosX(int x)
-{
-	this->_world_pos.getX() = 0;
 	return ;
 }
