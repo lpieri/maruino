@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 09:14:29 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 10:06:45 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -84,9 +84,8 @@ void	World::restart_game(void)
 	this->_character->getIsMoveBack() = true;
 }
 
-void	World::_happy_end(void)
+void	World::_the_end(char const * text)
 {
-	char 	text[] = "Winner";
 	size_t length = sizeof(text) / sizeof(*text);
 	uint8_t	w;
 	uint8_t h;
@@ -106,7 +105,7 @@ void	World::_happy_end(void)
 				iloop = false;
 		}
 	}
-	this->_character->getLife() = 3;
+	this->_character->getLife() = ALL_LIFE;
 	this->restart_game();
 }
 
@@ -129,36 +128,10 @@ void	World::check_end(void)
 			this->restart_game();
 		}
 		else if (this->_character->getLife() == 0)
-			this->_game_over();
+			this->_the_end("Game Over !!!");
 	}
 	if (flag)
-		this->_happy_end();
-}
-
-void	World::_game_over(void)
-{
-	char 	text[] = "GAME-OVER !!! ";
-	size_t length = sizeof(text) / sizeof(*text);
-	uint8_t	w;
-	uint8_t h;
-	bool	iloop;
-
-	iloop = true;
-	gb.display.setFontSize(1);
-	w = gb.display.getFontWidth();
-	h = gb.display.getFontHeight();
-	gb.display.clear();
-	gb.display.setCursor(.5 * (WIDTH - (w * length)), .5 * (HEIGHT - h));
-	gb.display.print(text);
-	while (iloop)
-	{
-		while (!gb.update()){
-			if (gb.buttons.pressed(BUTTON_A))
-				iloop = false;
-		}
-	}
-	this->_character->getLife() = 3;
-	this->restart_game();
+		this->_the_end("You Won !!!");
 }
 
 void	World::start_game(void)

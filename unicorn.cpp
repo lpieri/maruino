@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 09:45:46 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 10:14:32 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 Image UnicornI = Image(UnicornData);
 Image heart = Image(heartData);
 
-Unicorn::Unicorn(void) : _speed(1), _damages(10), Character(8, 8)
+Unicorn::Unicorn(void) : _speed(1), _damages(10), Character(S_CHAR_X, S_CHAR_Y)
 {
 }
 

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 15:56:05 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 09:55:18 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 10:16:06 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,6 +40,8 @@
 **	Character Macro
 */
 
+# define S_CHAR_X	25
+# define S_CHAR_Y	20
 # define S_HEART	11
 # define ALL_LIFE	2
 # define S_BAD		10
