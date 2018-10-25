@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 15:29:38 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:47:07 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,8 +24,6 @@ class Map
 {
 	private:
 		int			_starter;
-		int const	_len;
-		Vector2d	_size;
 		Vector2d	_pos;
 		int const *	_map;
 		int const *	_bad;
@@ -33,6 +31,8 @@ class Map
 	public:
 		Map(void);
 		~Map(void);
+
+		void	_print_obj(int i, int x, int y);
 
 		void	print(void);
 		int&	getStarterMap(void);

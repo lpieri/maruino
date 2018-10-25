@@ -6,24 +6,24 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/24 17:09:39 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:47:13 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "map.hpp"
-#include "level.hpp"
+#include "./includes/map.hpp"
+#include "./includes/level.hpp"
 
 Image earth_2 = Image(earth_2Data);
 Image badImage = Image(badData);
 Image DirtI = Image(DirtData);
 Image flagImage = Image(flagData);
 
-Map::Map(void) : _len(101), _size(S_BLOCK_X, S_BLOCK_Y), _pos(0, 0), _starter(0)
+Map::Map(void) : _pos(0, 0), _starter(0)
 {
 	this->_map = level1[1];
 	this->_bad = level1[0];
-	this->_pos.setVector2d(0, gb.display.height() - this->_size.getY());
+	this->_pos.setVector2d(0, HEIGHT - S_BLOCK_Y);
 }
 
 Map::~Map(void)
@@ -57,37 +57,38 @@ bool	Map::checkFlagExist(int character_pos)
 	return false;
 }
 
+void	Map::_print_obj(int i, int x, int y)
+{
+	if (this->_bad[i] == 1)
+	{
+		y = HEIGHT - S_BLOCK_Y - (this->_map[i] * S_BLOCK_Y) - S_BAD;
+		gb.display.drawImage(x, y, badImage, S_BAD, S_BAD);
+	}
+	else if (this->_bad[i] == 2)
+	{
+		y = HEIGHT - S_BLOCK_Y - (this->_map[i] * S_BLOCK_Y) - S_FLAG_Y;
+		gb.display.drawImage(x, y, flagImage, S_FLAG_X, S_FLAG_Y);
+	}
+}
+
 void	Map::print(void)
 {
-	int 	i = this->_starter;
 	int		x = 0;
-	int		y = this->getEarth(i);
-	int&	sizeX = this->_size.getX();
-	int&	sizeY = this->_size.getY();
+	int		y = this->getEarth(this->_starter);
 
-	while (i < this->_len)
+	for (int i = this->_starter; i < LEN_MAP; i++)
 	{
-		y = gb.display.height() - sizeY - (this->_map[i] * sizeY);
-		gb.display.drawImage(x, y, DirtI, sizeX, sizeY);
-		if (this->_bad[i] == 1)
-		{
-			y = gb.display.height() - sizeY - (this->_map[i] * sizeY) - S_BAD;
-			gb.display.drawImage(x, y, badImage, S_BAD, S_BAD);
-		}
-		if (this->_bad[i] == 2)
-		{
-			y = gb.display.height() - sizeY - (this->_map[i] * sizeY) - S_FLAG_Y;
-			gb.display.drawImage(x, y, flagImage, S_FLAG_X, S_FLAG_Y);
-		}
+		y = HEIGHT - S_BLOCK_Y - (this->_map[i] * S_BLOCK_Y);
+		gb.display.drawImage(x, y, DirtI, S_BLOCK_X, S_BLOCK_Y);
+		this->_print_obj(i, x, y);
 		if (this->_map[i] >= 1)
 		{
 			while (y < HEIGHT)
 			{
-				y += sizeY;
-				gb.display.drawImage(x, y, earth_2, sizeX, sizeY);
+				y += S_BLOCK_Y;
+				gb.display.drawImage(x, y, earth_2, S_BLOCK_X, S_BLOCK_Y);
 			}
 		}
-		x += sizeX;
-		i++;
+		x += S_BLOCK_X;
 	}
 }

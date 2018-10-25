@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 13:39:48 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:55:34 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,6 +16,7 @@
 
 # include <Gamebuino-Meta.h>
 # include "vector2d.hpp"
+# include "macro.hpp"
 
 class Character
 {
@@ -41,16 +42,17 @@ class Character
 		virtual void	sayHello(void) const;
 		virtual void	print(void);
 
-		int&			getLife(void);
-		int&			get_posX(void);
-		int&			get_posY(void);
 		int				getFoot(void);
 		int				getWorldPosX(void);
-		void			setWorldPosX(int x);
 		int				getWorldPosY(void);
+		int&			get_posX(void);
+		int&			getLife(void);
+		int&			get_posY(void);
 		bool&			getIsFall(void);
 		bool&			getIsRun(void);
 		bool&			getIsMoveBack(void);
+
+		void			setWorldPosX(int x);
 };
 
 #endif

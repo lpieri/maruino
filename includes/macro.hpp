@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 15:56:05 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 15:47:22 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:55:18 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -41,7 +41,7 @@
 */
 
 # define S_HEART	11
-# define ALL_LIFE	3
+# define ALL_LIFE	2
 # define S_BAD		10
 # define S_FLAG_X	11
 # define S_FLAG_Y	32

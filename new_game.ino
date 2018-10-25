@@ -6,12 +6,12 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 15:52:36 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:10:08 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "game.hpp"
+#include "./includes/game.hpp"
 
 Map*		maps = new Map();
 Character*	pedro = new Unicorn();

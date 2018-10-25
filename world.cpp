@@ -6,13 +6,13 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 16:19:18 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:14:29 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-# include "world.hpp"
-# include "level.hpp"
+# include "./includes/world.hpp"
+# include "./includes/level.hpp"
 
 Image skyImage = Image(skyData);
 Image le101 = Image(schoolData);

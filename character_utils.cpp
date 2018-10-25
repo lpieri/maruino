@@ -6,12 +6,12 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/24 16:51:56 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/24 16:52:44 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:54:02 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "character.hpp"
+#include "./includes/character.hpp"
 
 int&	Character::getLife(void)
 {

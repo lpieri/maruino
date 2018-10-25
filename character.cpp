@@ -6,16 +6,16 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/24 16:52:38 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:55:25 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "character.hpp"
+#include "./includes/character.hpp"
 
 Character::Character(int sizeX, int sizeY) : _size(sizeX, sizeY), _damages(2),
 	_speed(1), _pos(0, 0), _world_pos(0, 0), _is_run(true), _is_move_back(true),
-	_is_fall(true), _life(3)
+	_is_fall(true), _life(ALL_LIFE)
 {
 	return ;
 }

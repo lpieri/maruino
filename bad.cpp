@@ -6,12 +6,12 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/18 09:30:37 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/24 16:55:05 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:14:11 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "bad.hpp"
+#include "./includes/bad.hpp"
 
 // Image badImage = Image(badData);
 

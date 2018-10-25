@@ -6,12 +6,12 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/22 11:34:58 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 09:45:46 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "unicorn.hpp"
+#include "./includes/unicorn.hpp"
 
 Image UnicornI = Image(UnicornData);
 Image heart = Image(heartData);
@@ -39,15 +39,13 @@ void	Unicorn::print(void)
 	int		sizeX = Character::_size.getX();
 	int		sizeY = Character::_size.getY();
 	int		life = Character::_life;
-	int		i = 0;
 	int		hx = WIDTH - S_HEART;
 
 	gb.display.drawImage(x, y, UnicornI, sizeX, sizeY);
-	while (i < life)
+	for (int i = 0; i <= life; i++)
 	{
 		gb.display.drawImage(hx, 0, heart, S_HEART, S_HEART);
 		hx -= S_HEART + 2;
-		i++;
 	}
 }
 
@@ -62,7 +60,7 @@ void	Unicorn::run(int& map_starter)
 			Character::_pos.getX() += this->_speed + S_BLOCK_X;
 			Character::_world_pos.getX() += this->_speed;
 		}
-		else if (map_starter < 101 && posX >= (WIDTH / 2))
+		else if (map_starter < LEN_MAP && posX >= (WIDTH / 2))
 		{
 			Character::_world_pos.getX() += this->_speed;
 			map_starter += this->_speed;
@@ -72,12 +70,9 @@ void	Unicorn::run(int& map_starter)
 
 void	Unicorn::moveBack(int& map_starter)
 {
-	if (Character::_is_move_back == true)
+	if (Character::_is_move_back == true && Character::_world_pos.getX() > map_starter)
 	{
-		if (Character::_world_pos.getX() > map_starter)
-		{
-			Character::_pos.getX() -= this->_speed + S_BLOCK_X;
-			Character::_world_pos.getX() -= this->_speed;
-		}
+		Character::_pos.getX() -= this->_speed + S_BLOCK_X;
+		Character::_world_pos.getX() -= this->_speed;
 	}
 }
