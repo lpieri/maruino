@@ -6,15 +6,12 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:41:10 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 10:14:32 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/25 11:36:36 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "./includes/unicorn.hpp"
-
-Image UnicornI = Image(UnicornData);
-Image heart = Image(heartData);
 
 Unicorn::Unicorn(void) : _speed(1), _damages(10), Character(S_CHAR_X, S_CHAR_Y)
 {
@@ -32,22 +29,31 @@ void	Unicorn::sayHello(void) const
 	gb.display.print("Bonjour je suis Ponyta!");
 }
 
-void	Unicorn::print(void)
+Box 	Unicorn::_init_box(void)
 {
-	int		x = Character::_pos.getX();
-	int		y = Character::_pos.getY();
-	int		sizeX = Character::_size.getX();
-	int		sizeY = Character::_size.getY();
-	int		life = Character::_life;
-	int		hx = WIDTH - S_HEART;
+	Box 	ret;
 
-	gb.display.drawImage(x, y, UnicornI, sizeX, sizeY);
-	for (int i = 0; i <= life; i++)
-	{
-		gb.display.drawImage(hx, 0, heart, S_HEART, S_HEART);
-		hx -= S_HEART + 2;
-	}
+	ret.position_x = Character::_pos.getX();
+	ret.position_y = Character::_pos.getY();
+	ret.life = Character::_life;
+	ret.position_heart_x = WIDTH - S_HEART;
+	return (ret);
 }
+
+// void	Unicorn::print(void)
+// {
+// 	int		x = Character::_pos.getX();
+// 	int		y = Character::_pos.getY();
+// 	int		life = Character::_life;
+// 	int		hx = WIDTH - S_HEART;
+
+// 	gb.display.drawImage(x, y, UnicornI, S_CHAR_X, S_CHAR_X);
+// 	for (int i = 0; i <= life; i++)
+// 	{
+// 		gb.display.drawImage(hx, 0, heart, S_HEART, S_HEART);
+// 		hx -= S_HEART + 2;
+// 	}
+// }
 
 void	Unicorn::run(int& map_starter)
 {

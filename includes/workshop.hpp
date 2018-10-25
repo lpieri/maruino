@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   map.hpp                                          .::    .:/ .      .::   */
+/*   workshop.hpp                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 10:29:59 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/25 10:57:27 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/25 11:37:13 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef __MAP_HPP__
-# define __MAP_HPP__
+#ifndef __WORKSHOP_HPP__
+# define __WORKSHOP_HPP__
 
-# include "vector2d.hpp"
-# include "macro.hpp"
-# include "image.hpp"
-# include <Gamebuino-Meta.h>
-
-class Map
+struct Box
 {
-	private:
-		int			_starter;
-		Vector2d	_pos;
-		int const *	_map;
-		int const *	_bad;
-
-	public:
-		Map(void);
-		~Map(void);
-
-		void	_print_obj(int i, int x, int y);
-
-		void	print(void);
-		int&	getStarterMap(void);
-		int		getEarth(int character_pos);
-		bool	checkBadExist(int character_pos);
-		bool	checkFlagExist(int character_pos);
+	int		position_x;
+	int		position_y;
+	int		life;
+	int		position_heart_x;
 };
 
 #endif
