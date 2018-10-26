@@ -5,15 +5,14 @@ Game for Gamebuino
 1. cle gamebuino + arduino * 4
 
 # step workshop:
-```
-1/ Expliquer loop et setup
-2/ Montre image.hpp + pixel art tuto
-3/ commencer a print le monde + la map
-4/ coder Unicorn::print() + print la licorne (expliquation des la lib gamebuino)
-5/ coder l'affichage des vies et ajouter la physique + le check de la mort (expliquation d'un boucle while)
-6/ coder les events (expliquation des if + else if)
-7/ Enjoy et play
-```
+
+1. Expliquer loop et setup
+2. Montre image.hpp + pixel art tuto
+3. commencer a print le monde + la map
+4. coder Unicorn::print() + print la licorne (expliquation des la lib gamebuino)
+5. coder l'affichage des vies et ajouter la physique + le check de la mort (expliquation d'un boucle while)
+6. coder les events (expliquation des if + else if)
+7. Enjoy et play
 
 
 # detail step workshop:
@@ -62,13 +61,18 @@ Game for Gamebuino
 	3. Ajouter deux variables global heartI et UnicornI qui seront la convertion des ImageData en struct Image
 	de GameBuino
 	4. 2 option:
-		1. cree 4 variables (position_x, position_y, life, position_heart_x (tous des int))
-		Il faudra set les valeurs de ces variable en recuperant des valeur de la class mère de Unicorn (la class Character)
-		pour recuperer un valeur de cette class il faut une syntaxe specifique:
+		1. crée 4 variables tous des int: 
+			1. position_x
+			2. position_y
+			3. life
+			4. position_heart_x
+			5. Il faudra set les valeurs de ces variable en recuperant des valeur de la class mère de Unicorn (la class Character) pour recuperer un valeur de cette class il faut une syntaxe specifique:
+		```
 			Syntaxe C++:
 				Character::_var_name
 				si c'est une autre class comme un Vector:
 					Character::_var_name.fonction()
+		```
 		2. instancer une variable de la Struct <Box> (si sturcture expliquer ce que c'est une structure
 		(la definition d'une structure de C sera suffisante)) puis appeler la fontion <this->_init_box()>
 		cette fonction retourne une Struct Box
