@@ -9,7 +9,7 @@
 4. Coder `Unicorn::print()` + print la licorne (expliquation des la lib gamebuino)
 5. Coder l'affichage des vies et ajouter la physique + le check de la mort (expliquation d'un boucle while)
 6. Coder les events (expliquation des if + else if)
-7. Enjoy et play
+7. Enjoy and play
 
 
 # detail step workshop:
