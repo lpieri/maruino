@@ -20,10 +20,10 @@ Game for Gamebuino
 
 1. Expliquation loop + setup (expliquer le concept de fonction):
 
-	1. setup() --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer
+	1. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer
 	des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement
 	du programme)
-	2. loop() --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et
+	2. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et
 	bien d'autre choses comme des robots, des jeux....
 	3. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
 	4. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
@@ -37,31 +37,33 @@ Game for Gamebuino
 	<https://gamebuino.com/creations/png-to-code>
 
 3. Commencer a print le debut du jeu:
-	1. Leur faire include <game.hpp>
-	2. création leur premier variables <Map et World (le Nom des class)> (expliquer une variables)
-	
+	1. Leur faire include `game.hpp`
+	2. création leur premier variables `Map et World (le Nom des class)` (expliquer une variables)
+	```
 		Syntaxe C++ :
 			Type *	name = new Type() -->
-				Type == La classe Utiliser
-				* name == pour le pointer
-				new Type() == Malloc la classe avec appele de sont constructeur
+			Type == La classe Utiliser
+			* name == pour le pointer
+			new Type() == Malloc la classe avec appele de sont constructeur
 		Prototype des constructeur:
 			Map::Map(void)
 			World::World(Character *, Map *)
-			
-	3. Set l'hardware avec la fonction <gb.begin();> dans la fonction setup()
+	```		
+	3. Set l'hardware avec la fonction `gb.begin();` dans la fonction setup()
 	4. Commencer a print des choses dans loop():
-		Ajouter une boucle <while (!gb.update());> et <gb.display.clear();>:
-		Le while sert a attendre d'un event se produit.
-		La fonction clear(sert a clear les pixels de l'ecran).
-	5. Appeler les fonctions de print_sky() de la class World et la fonction print() de la class Map
+		1. Ajouter une boucle `while (!gb.update());` et `gb.display.clear();`:
+		2. Le while sert a attendre d'un event se produit.
+		3. La fonction clear(sert a clear les pixels de l'ecran).
+	5. Appeler les fonctions de `print_sky()` de la class World et la fonction `print()` de la class Map
+	```
 		Syntaxe:
 			[pt_name]->fonction_name();
+	```
 	6. On peut Televerser le programme pour envoyer le jeu sur la GameBuino;
 
 4. Coder Unicorn::print():
-	1. <Unicorn::print()> sert a dire que la fonction print appartient a la class Unicorn
-	2. Include <unicorn.hpp>
+	1. `Unicorn::print()` sert à dire que la fonction print appartient a la class Unicorn
+	2. Include `"unicorn.hpp"`
 	3. Ajouter deux variables global heartI et UnicornI qui seront la convertion des ImageData en struct Image
 	de GameBuino
 	4. 2 option:
