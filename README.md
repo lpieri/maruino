@@ -20,18 +20,13 @@ Game for Gamebuino
 
 1. Expliquation loop + setup (expliquer le concept de fonction):
 
-	1. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer
-	des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement
-	du programme)
-	2. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et
-	bien d'autre choses comme des robots, des jeux....
+	1. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme)
+	2. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et bien d'autre choses comme des robots, des jeux....
 	3. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
 	4. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
 
 2. Image est un .h:
-	1. Dans image.hpp il à des variables constante (qui ne change jamais), ce sont
-	des tableaux d'hexa qui sont ici une couleur (chaque couleur == un pixel) ces datas de pixels serviront plus
-	tard pour afficher le personnage les nuages ....
+	1. Dans image.hpp il à des variables constante (qui ne change jamais), ce sont des tableaux d'hexa qui sont ici une couleur (chaque couleur == un pixel) ces datas de pixels serviront plus tard pour afficher le personnage les nuages ....
 	2. ouvrire le site <https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgKCwkOOrCgw/edit> pour
 	cree sont pixel art on peux après le convertir en hexa sur cette page (drop le fichier DL)
 	<https://gamebuino.com/creations/png-to-code>
