@@ -1,6 +1,3 @@
-# maruino
-Game for Gamebuino
-
 # todo:
 1. cle gamebuino + arduino * 4
 
