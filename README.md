@@ -24,11 +24,13 @@ Game for Gamebuino
 	3. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
 	4. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
 
+
 2. **Image est un .h:**
 	1. Dans `image.hpp` il à des variables constante (qui ne change jamais), ce sont des tableaux d'hexa qui sont ici une couleur (chaque couleur == un pixel) ces datas de pixels serviront plus tard pour afficher le personnage les nuages ....
 	2. ouvrire le site <https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgKCwkOOrCgw/edit> pour
 	cree sont pixel art on peux après le convertir en hexa sur cette page (drop le fichier DL)
 	<https://gamebuino.com/creations/png-to-code>
+
 
 3. **Commencer a print le debut du jeu:**
 	1. Leur faire include `game.hpp`
@@ -59,6 +61,7 @@ Game for Gamebuino
 		```
 	6. On peut Televerser le programme pour envoyer le jeu sur la GameBuino;
 
+
 4. **Coder Unicorn::print():**
 	1. `Unicorn::print()` sert à dire que la fonction print appartient a la class Unicorn
 	2. Include `"unicorn.hpp"`
@@ -84,6 +87,7 @@ Game for Gamebuino
 	6. Il peux print la licorne (cree un pointeur) le prototype du constructeur `Unicorn::Unicorn(void)`
 	7. Televerser le programme
 
+
 5. **Ajout de la vie, la mort et la gravite:**
 	1. Pour ajouter la graviter on peux appeler la fonction `World::add_physical(void)`
 	2. Pour ajouter la mort on peux appeler la fonction `World::check_end(void)`
@@ -91,6 +95,7 @@ Game for Gamebuino
 	4. Il faut crée un boucle `while` qui doit ce stopper quand `i est <= a box.life ou life` (expliquer ce que c'est un while)
 	5. a chaque tour du while appeler la fonction `Gamebuino::drawImage` avec la `heartImage` et la `position_x` de heart et modifier la valeur de `position_heart_x` en supprimant la valeur `S_HEART` (macro dans `"macro.hpp"`) + 2
 	6. Televerser le programme (Normalement la licorne devrait tomber)
+
 
 6. **Ajout des events:**
 	1. Expliquer ce que c'est un If et un Else If
