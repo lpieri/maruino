@@ -6,15 +6,19 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/25 13:44:57 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 13:45:31 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/13 15:31:02 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	setup() {
+#include "./includes/games.hpp"
 
+void	setup() {
+	gb.begin();
+	earth->start_game();
 }
 
 void	loop() {
-
+	while (!gb.update());
+	gb.display.clear();
 }

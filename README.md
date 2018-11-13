@@ -1,13 +1,12 @@
 # todo:
 1. cle gamebuino + arduino * 4
 
-# step workshop:
+# step workshop 30 min:
 
 1. Expliquer `loop()` et `setup()`
 2. Montre `image.hpp` + pixel art tuto
-3. Commencer a print le monde + la map
-4. Coder `Unicorn::print()` + print la licorne (expliquation des la lib gamebuino)
-5. Coder l'affichage des vies et ajouter la physique + le check de la mort (expliquation d'un boucle while)
+3. Commencer a print le monde + la map + licorne
+5. Coder ajouter la physique
 6. Coder les events (expliquation des if + else if)
 7. Enjoy and play
 
@@ -32,8 +31,7 @@
 
 
 3. **Commencer a print le debut du jeu:**
-	1. Leur faire include `game.hpp`
-	2. création leur premier variables `Map et World (le Nom des class)` (expliquer une variables)
+	1. création leur premier variables `Map et World (le Nom des class)` (expliquer une variables)
 		> Syntaxe C++ :
 		```
 			Type *	name = new Type() -->
@@ -48,51 +46,17 @@
 			Map::Map(void)
 			World::World(Character *, Map *)
 		```
-	3. Set l'hardware avec la fonction `gb.begin();` dans la fonction `setup()`
-	4. Commencer a print des choses dans `loop()`:
-		1. Ajouter une boucle `while (!gb.update());` et `gb.display.clear();`:
-		2. Le while sert a attendre d'un event se produit.
-		3. La fonction clear (sert a clear les pixels de l'ecran).
-	5. Appeler les fonctions de `print_sky()` de la class World et la fonction `print()` de la class Map
+	2. Appeler les fonctions de `print_sky()` de la class World et la fonction `print()` de la class Map (dans un ordre specifique sky map licorne)
 		> Syntaxe:
 		```
 			[pointer_name]->fonction_name();
 		```
-	6. On peut Televerser le programme pour envoyer le jeu sur la GameBuino;
-
-
-4. **Coder Unicorn::print():**
-	1. `Unicorn::print()` sert à dire que la fonction print appartient a la class Unicorn
-	2. Include `"unicorn.hpp"`
-	3. Ajouter deux variables global `heartImage` et `UnicornImage` qui seront la convertion des ImageData en struct Image de GameBuino
-	4. 2 option:
-		1. crée 4 variables tous des int:
-			1. position_x
-			2. position_y
-			3. life
-			4. position_heart_x
-			5. Il faudra set les valeurs de ces variable en recuperant des valeur de la class mère de `Unicorn` (la class Character) pour recuperer un valeur de cette class il faut une syntaxe specifique:
-				> Syntaxe C++:
-				```
-				Character::_var_name
-				si c'est une autre class comme un Vector:
-					Character::_var_name.fonction()
-				```
-		2. instancer une variable de la Struct `Box` (si sturcture expliquer ce que c'est une structure
-		(la definition d'une structure de C sera suffisante)) puis appeler la fontion `this->_init_box()`
-		cette fonction retourne une Struct Box
-			Expliquation du `this->` une fonction de class a toujour une variable nommer this qui est un pointeur sur sa propre instancer
-	5. Appeler la fonction `gb.display.drawImage()` elle prend 5 param (c'est pas a la norme de 42 :) `drawImage(x, y, Image, SizeX, SizeY)`
-	6. Il peux print la licorne (cree un pointeur) le prototype du constructeur `Unicorn::Unicorn(void)`
-	7. Televerser le programme
+	3. On peut Televerser le programme pour envoyer le jeu sur la GameBuino;
 
 
 5. **Ajout de la vie, la mort et la gravite:**
 	1. Pour ajouter la graviter on peux appeler la fonction `World::add_physical(void)`
 	2. Pour ajouter la mort on peux appeler la fonction `World::check_end(void)`
-	3. Pour ajouter la vie on doit continuer de coder la fonction `Unicorn::print(void)`
-	4. Il faut crée un boucle `while` qui doit ce stopper quand `i est <= a box.life ou life` (expliquer ce que c'est un while)
-	5. a chaque tour du while appeler la fonction `Gamebuino::drawImage` avec la `heartImage` et la `position_x` de heart et modifier la valeur de `position_heart_x` en supprimant la valeur `S_HEART` (macro dans `"macro.hpp"`) + 2
 	6. Televerser le programme (Normalement la licorne devrait tomber)
 
 
