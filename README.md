@@ -16,13 +16,15 @@
 
 1. **Expliquation loop + setup (expliquer le concept de fonction):**
 
-	1. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme)
-	2. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et bien d'autre choses comme des robots, des jeux....
-	3. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
-	4. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
+	1.	Expliquer ce que c'est une fonction (bloc ou on defini un ensemble d'insctruction qui peux etre executer par la machine si on l'appel (appeller une fonction est une insctruction))
+	2. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme)
+	3. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et bien d'autre choses comme des robots, des jeux....
+	4. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
+	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
 
 
 2. **Image est un .h:**
+	1.	Expliquer ce que c'est une variable ()
 	1. Dans `image.hpp` il à des variables constante (qui ne change jamais), ce sont des tableaux d'hexa qui sont ici une couleur (chaque couleur == un pixel) ces datas de pixels serviront plus tard pour afficher le personnage les nuages ....
 	2. ouvrire le site <https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgKCwkOOrCgw/edit> pour
 	cree sont pixel art on peux après le convertir en hexa sur cette page (drop le fichier DL)
@@ -38,14 +40,14 @@
 			Type == La classe Utiliser
 			* name == pour le pointer
 			new Type() == Malloc la classe avec appele de sont constructeur
-			
+
 			Map * myname_var = new Map();
 		```
 		> Prototype des constructeur:
 		```
 			Map::Map(void)
 			World::World(Character *, Map *)
-		```		
+		```
 	3. Set l'hardware avec la fonction `gb.begin();` dans la fonction `setup()`
 	4. Commencer a print des choses dans `loop()`:
 		1. Ajouter une boucle `while (!gb.update());` et `gb.display.clear();`:
@@ -64,7 +66,7 @@
 	2. Include `"unicorn.hpp"`
 	3. Ajouter deux variables global `heartImage` et `UnicornImage` qui seront la convertion des ImageData en struct Image de GameBuino
 	4. 2 option:
-		1. crée 4 variables tous des int: 
+		1. crée 4 variables tous des int:
 			1. position_x
 			2. position_y
 			3. life
