@@ -34,7 +34,7 @@ class Map
 		void	_print_obj(int i, int x, int y);
 
 		void	print(void);
-		int&	getStarterMap(void);
+		int&	getStart(void);
 		int		getEarth(int character_pos);
 		bool	checkBadExist(int character_pos);
 		bool	checkFlagExist(int character_pos);

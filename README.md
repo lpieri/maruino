@@ -13,13 +13,21 @@
 
 # detail step workshop:
 
+0.	**Présentions animateur enfants:**
+
+	1.	Presentation
+	2.	Priser la glace avec des questions du genre (ton jeu pref)
+	3.	presenter gamebuino et les jeux retro
+	4.	Presenter comment marche le code et ou on le trouve avec des ex courant (aujourd'hui il sont tous sur leur tel youtube, snap)
+
+
 1. **Expliquation loop + setup (expliquer le concept de fonction):**
 
 	1.	Expliquer ce que c'est une fonction (bloc ou on defini un ensemble d'insctruction qui peux etre executer par la machine si on l'appel (appeller une fonction est une insctruction))
 	2. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme)
 	3. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et bien d'autre choses comme des robots, des jeux....
 	4. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
-	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux
+	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux (librairi == bibli ou on se sert uniquement des titres des livres (les functions))
 
 
 2. **Image est un .h:**

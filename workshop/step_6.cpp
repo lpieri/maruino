@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 16:17:49 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/15 16:05:57 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,16 +27,15 @@ void loop() {
 	gb.display.clear();
 
 	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
-		licorne->run(maps->getStarterMap());
+		licorne->run(maps->getStart());
 	if (gb.buttons.repeat(BUTTON_LEFT, 1))
-		licorne->moveBack(maps->getStarterMap());
+		licorne->moveBack(maps->getStart());
 	if (gb.buttons.pressed(BUTTON_A))
 		licorne->jump();
 	if (gb.buttons.pressed(BUTTON_MENU))
 		earth->restart_game();
-	earth->print_sky();
+	earth->print();
 	maps->print();
 	licorne->print();
-	earth->add_physical();
-	earth->check_end();
+	earth->add_physics();
 }

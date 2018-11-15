@@ -31,7 +31,7 @@ Map::~Map(void)
 	return ;
 }
 
-int&	Map::getStarterMap(void)
+int&	Map::getStart(void)
 {
 	return this->_starter;
 }

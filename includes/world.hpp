@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/06 11:23:25 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/15 16:05:41 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,8 +37,8 @@ class World
 		World(Character* character, Map* maps);
 		~World(void);
 
-		void	print_sky(void) const;
-		void	add_physical(void);
+		void	print(void) const;
+		void	add_physics(void);
 		void	restart_game(void);
 		void	check_end(void);
 		void	start_game(void);

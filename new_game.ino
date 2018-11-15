@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   new_game.ino                                     .::    .:/ .      .::   */
+/*   step_6.cpp                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 11:39:23 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/15 16:04:13 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,8 +14,8 @@
 #include "./includes/game.hpp"
 
 Map*		maps = new Map();
-Character*	pedro = new Unicorn();
-World*		earth = new World(pedro, maps);
+Character*	licorne = new Unicorn();
+World*		earth = new World(licorne, maps);
 
 void setup() {
 	gb.begin();
@@ -27,16 +27,15 @@ void loop() {
 	gb.display.clear();
 
 	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
-		pedro->run(maps->getStarterMap());
+		licorne->run(maps->getStart());
 	if (gb.buttons.repeat(BUTTON_LEFT, 1))
-		pedro->moveBack(maps->getStarterMap());
+		licorne->moveBack(maps->getStart());
 	if (gb.buttons.pressed(BUTTON_A))
-		pedro->jump();
+		licorne->jump();
 	if (gb.buttons.pressed(BUTTON_MENU))
 		earth->restart_game();
-	earth->print_sky();
+	earth->print();
 	maps->print();
-	pedro->print();
-	earth->add_physical();
-	earth->check_end();
+	licorne->print();
+	earth->add_physics();
 }
