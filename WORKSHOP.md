@@ -29,46 +29,34 @@
 	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux (librairi == bibli ou on se sert uniquement des titres des livres (les functions)) (exemple livre de magie + sort + appel du sort)
 
 
-2. **Image est un .h:**
-	1.	Expliquer ce que c'est une variable (c'est un container qui contient des choses d'une certaine typologie, ex une boutielle contient des types liquide, un frigo des types bouffes. ce qu'il contient peux influencer tout le reste du code)
-	1. Dans `image.hpp` il à des variables constante (qui ne change jamais), ce sont des tableaux d'hexa qui sont ici une couleur (chaque couleur == un pixel) ces datas de pixels serviront plus tard pour afficher le personnage les nuages ....
-	2. ouvrire le site <https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgKCwkOOrCgw/edit> pour
-	cree sont pixel art on peux après le convertir en hexa sur cette page (drop le fichier DL)
-	<https://gamebuino.com/creations/png-to-code>
-
-
-3. **Commencer a print le debut du jeu:**
-	1. création leur premier variables `Map et World (le Nom des class)` (expliquer une variables)
+2. **Je commence a coder.com:**
+	1.	Expliquer ce que c'est une variable (c'est un container qui contient des choses d'une certaine typologie, ex une boutielle contient des types liquide, un frigo des types bouffes. ce qu'il contient peux influencer tout le reste du code) expliquer les types que l'on a (Map World Character) en montrant les lignes dans le code
+	2. création leur premier variables `Character`
 		> Syntaxe C++ :
 		```
-			Type *	name = new Type() -->
+			Type *	name = new Type()
 			Type == La classe Utiliser
 			* name == pour le pointer
 			new Type() == Malloc la classe avec appele de sont constructeur
 
-			Map * myname_var = new Map();
+			Character*	name = new Unicorn();
 		```
 		> Prototype des constructeur:
 		```
-			Map::Map(void)
-			World::World(Character *, Map *)
+			Unicorn::Unicorn(void)
 		```
-	2. Appeler les fonctions de `print()` de la class World et la fonction `print()` de la class Map (dans un ordre specifique sky map licorne)
-		> Syntaxe:
-		```
-			[pointer_name]->fonction_name();
-		```
-	3. On peut Televerser le programme pour envoyer le jeu sur la GameBuino;
+	3.	remplir le world avec le personnage (rajouter le nom de la variable a la place /*??*/) (expliquer les parametres des fonctions)
+	4.	On peut Televerser le programme pour envoyer le jeu sur la GameBuino (montrer le boutons en haut a gauche (la flèche (trop de parenthèse (recursive))));
+	5.	Ajouter les autres prints en plus de l'exemple `maps->print();` (le personnage + le world) (il a un ordre d'affichage 1 world, 2 map, 3 personnage sinon ca s'overwrite)
 
 
 5. **Ajout de la vie, la mort et la gravite:**
-	1. Pour ajouter la graviter on peux appeler la fonction `World::add_physical(void)`
-	2. Pour ajouter la mort on peux appeler la fonction `World::check_end(void)`
-	6. Televerser le programme (Normalement la licorne devrait tomber)
+	1. Pour ajouter la gravite on peux appeler la fonction `World::add_physics(void)`
+	2. Televerser le programme (Normalement la licorne devrait tomber mais elle peut pas bouger)
 
 
-6. **Ajout des events:**
-	1. Expliquer ce que c'est un If et un Else If
+6. **Ajout des events/utilisation des buttons:**
+	1. Expliquer ce que c'est un If
 	2. Pour les events du personnage il existe une fonction pour Jump `Character::jump(void)`, une autre pour Run
 	`Character::run(void)` et une autre pour reculer `Character::moveBack(void)` ces fonctions sont aussi prototyper
 	en `Unicorn::fonction(void)` car elle sont ovewrite par celle existante dans la class Unicorn (si trop complexe
@@ -92,3 +80,6 @@
 	4. Televerser le code
 
 Dans le dossier workshop il le code step by step :)
+
+pour les non interessees: terminer l'atelier rapidement et discuter avec lui (orientation, la programmation t'interesse?)
+pour les interesses et/ou les plus "experts": site gamebuino (tuto, autres jeux), discord, orientation dev --> stand Le-101

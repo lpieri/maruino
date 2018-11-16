@@ -3,22 +3,24 @@
 ###	Les types de variables differente:
 	1.	Map*
 	2.	World*
-	3.	Character*
-		1.	Unicorn
+	3.	Character* (ou Unicorn*)
+
+###	Comment creer une variable:
+	Type_de_la_variable* 	nom_de_la_variable = new contenue_de_la_variable();
 
 ### Fonction D'affichage:
-	1.	Print (void) [afficher]
+	1.	Print () [afficher]
 
 ###	Fonction D'event:
 	1.	gb.buttons.pressed (bouttons)
 	2.	gb.buttons.repeat (bouttons, temps)
 	3.	Run (Debut de la map) [Courrir]
 	4.	Moveback (Debut de la map) [Reculer]
-	5.	Jump (void) [Sauter]
-	6.	restart_game (void) [redemarrer le jeu]
+	5.	Jump () [Sauter]
+	6.	restart_game () [redemarrer le jeu]
 
-###	Fonction pour ajouter la graviter, la mort, la vie, et l'univers
-	1.	add_physics (void) [ajouter la physique]
+###	Fonction pour ajouter la gravite, la mort, la vie, et l'univers
+	1.	add_physics() [ajouter la physique]
 
 ### Bouttons de la Gamebuino:
 	1.	BUTTON_A
@@ -40,4 +42,4 @@
 		1.	nom_du_hero->nom_de_la_fonction(parametre....);
 		2.	la fleches `->` sert à utiliser la fonction pour ce personnage.
 
-### Toute les fonctions autre que `gb.display.repeat` ou `gb.display.pressed` sont a utiliser avec une flèche `->`
+### Toute les fonctions autre que `gb.display.repeat` ou `gb.display.pressed` sont a utiliser avec une flèche `->` avant

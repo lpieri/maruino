@@ -15,7 +15,8 @@
 
 Map*		maps = new Map();
 // Rip stan lee ??
-World*		earth = new World(/*??*/, maps);
+Unicorn* toto = new Unicorn();
+World*		earth = new World(toto, maps);
 
 void setup() {
 	gb.begin();
@@ -27,9 +28,14 @@ void loop() {
 	gb.display.clear();
 
 	// Events ??
-	if (gb.buttons.pressed(BUTTON_MENU))
+	//if (gb.buttons.pressed(BUTTON_MENU))
 		/*[redemarer le jeu]*/
 	// Affichage ??
-	maps->print()
+	
+	earth->print();
+	maps->print();
+  toto->print();
+  
 	// Physique ??
+  earth->add_physics();
 }
