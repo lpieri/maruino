@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   step_6.cpp                                       .::    .:/ .      .::   */
+/*   new_game.ino                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/15 16:04:13 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/16 10:19:42 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,8 +14,8 @@
 #include "./includes/game.hpp"
 
 Map*		maps = new Map();
-Character*	licorne = new Unicorn();
-World*		earth = new World(licorne, maps);
+// Rip stan lee ??
+World*		earth = new World(/*??*/, maps);
 
 void setup() {
 	gb.begin();
@@ -26,16 +26,10 @@ void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
-		licorne->run(maps->getStart());
-	if (gb.buttons.repeat(BUTTON_LEFT, 1))
-		licorne->moveBack(maps->getStart());
-	if (gb.buttons.pressed(BUTTON_A))
-		licorne->jump();
+	// Events ??
 	if (gb.buttons.pressed(BUTTON_MENU))
-		earth->restart_game();
-	earth->print();
-	maps->print();
-	licorne->print();
-	earth->add_physics();
+		/*[redemarer le jeu]*/
+	// Affichage ??
+	maps->print()
+	// Physique ??
 }
