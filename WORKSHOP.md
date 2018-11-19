@@ -57,17 +57,14 @@
 
 6. **Ajout des events/utilisation des buttons:**
 	1. Expliquer ce que c'est un If
-	2. Pour les events du personnage il existe une fonction pour Jump `Character::jump(void)`, une autre pour Run
-	`Character::run(void)` et une autre pour reculer `Character::moveBack(void)` ces fonctions sont aussi prototyper
-	en `Unicorn::fonction(void)` car elle sont ovewrite par celle existante dans la class Unicorn (si trop complexe
-	demander a @delay)
+	2.	Il a des fonctions pour touts les events `Unicorn::jump(void)`, `Unicorn::run(int& starter_map)`, `Unicorn::moveBack(int& starter_map)`. Pour get le starter de la map il faut appeler une fonction `Map::getStart(void)`.
 	3. Commencer à ecrire le code:
 		1. Exemple pour les events:
 			```
 			if (gb.buttons.repeat(Bouton, temps))
 				fonction to execute
 			```
-		2. Gamebuino a plusieurs fonction pour les events des boutons comme repeat() pour appuyer longtemps sur une touche ou pressed pour le faire qu'une seule fois. Pour dire sur quel bouton on appuye Gamebuino a plusieurs macro
+		2. Gamebuino a plusieurs fonction pour les events des boutons comme `repeat()` pour appuyer longtemps sur une touche ou `pressed()` pour le faire qu'une seule fois. Pour référencer les boutons Gamebuino a crée plusieurs Macro:
 		```
 		BUTTON_A
 		BUTTON_B
@@ -79,7 +76,7 @@
 		```
 	4. Televerser le code
 
-Dans le dossier workshop il le code step by step :)
+### Dans le dossier workshop il le code step by step :)
 
-pour les non interessees: terminer l'atelier rapidement et discuter avec lui (orientation, la programmation t'interesse?)
-pour les interesses et/ou les plus "experts": site gamebuino (tuto, autres jeux), discord, orientation dev --> stand Le-101
+**pour les non interessees: terminer l'atelier rapidement et discuter avec lui (orientation, la programmation t'interesse ?)**
+**pour les interesses et/ou les plus "experts": site gamebuino (tuto, autres jeux), discord, orientation dev --> stand Le-101**
