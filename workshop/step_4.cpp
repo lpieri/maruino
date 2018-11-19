@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/19 15:51:20 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/19 15:53:22 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include "./includes/game.hpp"
 
 Map*		maps = new Map();
-Character*	licorne = new Unicorn()
+Character*	licorne = new Unicorn();
 World*		earth = new World(licorne, maps);
 
 void setup() {
