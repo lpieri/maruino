@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/16 10:19:42 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/19 15:43:52 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,9 +14,10 @@
 #include "./includes/game.hpp"
 
 Map*		maps = new Map();
-// Rip stan lee ??
-Unicorn* toto = new Unicorn();
-World*		earth = new World(toto, maps);
+/*
+**	Rip stan lee ??
+*/
+World*		earth = new World(/*??*/, maps);
 
 void setup() {
 	gb.begin();
@@ -27,15 +28,16 @@ void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	// Events ??
-	//if (gb.buttons.pressed(BUTTON_MENU))
-		/*[redemarer le jeu]*/
-	// Affichage ??
-	
-	earth->print();
+	/*
+	**Events ??
+	** if (gb.buttons.pressed(BUTTON_MENU))
+	**	[redemarer le jeu]
+	** Affichage ??
+	*/
+
 	maps->print();
-  toto->print();
-  
-	// Physique ??
-  earth->add_physics();
+
+	/*
+	**	Physique ??
+	*/
 }

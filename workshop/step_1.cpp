@@ -5,20 +5,39 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/25 13:44:57 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/13 15:31:02 by delay       ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/21 11:27:16 by delay        #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/19 15:45:09 by delay       ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "./includes/games.hpp"
+#include "./includes/game.hpp"
 
-void	setup() {
+Map*		maps = new Map();
+/*
+**	Rip stan lee ??
+*/
+World*		earth = new World(/*??*/, maps);
+
+void setup() {
 	gb.begin();
 	earth->start_game();
 }
 
-void	loop() {
+void loop() {
 	while (!gb.update());
 	gb.display.clear();
+
+	/*
+	**Events ??
+	** if (gb.buttons.pressed(BUTTON_MENU))
+	**	[redemarer le jeu]
+	** Affichage ??
+	*/
+
+	maps->print();
+
+	/*
+	**	Physique ??
+	*/
 }
