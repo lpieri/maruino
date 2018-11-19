@@ -5,9 +5,9 @@
 
 1.	Présentation
 2.	Expliquer le concept d'une fonction
-4.	Commencer a print le monde + la map + licorne
+4.	Commencer a print `le monde` + `la map` + `licorne`
 6.	Coder ajouter la physique
-7.	Coder les events (expliquation des if + else if)
+7.	Coder les events (expliquation des `if`)
 8.	Enjoy and play
 
 # detail step workshop:
@@ -30,14 +30,14 @@
 
 
 2. **Je commence a coder.com:**
-	1.	Expliquer ce que c'est une variable (c'est un container qui contient des choses d'une certaine typologie, ex une boutielle contient des types liquide, un frigo des types bouffes. ce qu'il contient peux influencer tout le reste du code) expliquer les types que l'on a (Map World Character) en montrant les lignes dans le code
-	2. création leur premier variables `Character`
+	1.	Expliquer ce que c'est une variable (c'est un container qui contient des choses d'une certaine typologie, ```ex une boutielle contient des types liquide```, ```un frigo des types bouffes```. ce qu'il contient peux `influencer tout le reste du code`) expliquer les types que l'on a (`Map`, `World`, `Character`) en montrant les lignes dans le code
+	2. création de leur première variable `Character`
 		> Syntaxe C++ :
 		```
-			Type *	name = new Type()
-			Type == La classe Utiliser
-			* name == pour le pointer
-			new Type() == Malloc la classe avec appele de sont constructeur
+			Type *	name = new Type();
+			 - Type == La classe Utiliser
+			 - * name == pour le pointer
+			 - new Type() == Malloc la classe avec appele de sont constructeur
 
 			Character*	name = new Unicorn();
 		```
@@ -45,13 +45,13 @@
 		```
 			Unicorn::Unicorn(void)
 		```
-	3.	remplir le world avec le personnage (rajouter le nom de la variable a la place /*??*/) (expliquer les parametres des fonctions)
+	3.	remplir le world avec le personnage (rajouter le nom de la variable a la place `/*??*/`) (expliquer les parametres des fonctions)
 	4.	On peut Televerser le programme pour envoyer le jeu sur la GameBuino (montrer le boutons en haut a gauche (la flèche (trop de parenthèse (recursive))));
-	5.	Ajouter les autres prints en plus de l'exemple `maps->print();` (le personnage + le world) (il a un ordre d'affichage 1 world, 2 map, 3 personnage sinon ca s'overwrite)
+	5.	Ajouter les autres prints en plus de l'exemple `maps->print();` (le personnage + le world) (il a un ordre d'affichage 1 world, 2 map, 3 personnage sinon ca s'overwrite), (vous pouvez le laisser ecrire dans n'import qu'elle ordre pour lui expliquer que le code s'execute de facon bete et mechant (de haut en bas))
 
 
 5. **Ajout de la vie, la mort et la gravite:**
-	1. Pour ajouter la gravite on peux appeler la fonction `World::add_physics(void)`
+	1. Pour ajouter la gravite on peux appeler la fonction `World::add_physics(void)` (`name_var_world->add_physics()`)
 	2. Televerser le programme (Normalement la licorne devrait tomber mais elle peut pas bouger)
 
 
