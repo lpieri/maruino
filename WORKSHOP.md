@@ -1,32 +1,32 @@
 # todo (Delay):
 1. cle gamebuino + arduino * 4
 
-### step workshop 30 min:
+# step workshop 30 min:
 
-1. Expliquer `loop()` et `setup()`
-2. Montre `image.hpp` + pixel art tuto
-3. Commencer a print le monde + la map + licorne
-5. Coder ajouter la physique
-6. Coder les events (expliquation des if + else if)
-7. Enjoy and play
+1.	Présentation
+2.	Expliquer le concept d'une fonction
+4.	Commencer a print le monde + la map + licorne
+6.	Coder ajouter la physique
+7.	Coder les events (expliquation des if + else if)
+8.	Enjoy and play
 
-### detail step workshop:
+# detail step workshop:
 
 0.	**Présentions animateur enfants:**
 
 	1.	Presentation
 	2.	Priser la glace avec des questions du genre (ton jeu pref)
-	3.	presenter gamebuino et les jeux retro
-	4.	Presenter comment marche le code et ou on le trouve avec des ex courant (aujourd'hui il sont tous sur leur tel youtube, snap) ca sert a com avec la machine
+	3.	Presenter gamebuino et les jeux retro (Mario, Sonic...)
+	4.	Expliquer comment marche le code et ou on le trouve avec des exemples courant : telephone, facebook, jeux video, console de jeux.... (le code sert à communiquer avec la machine et lui donner des ordres)
 
 
-1. **Expliquation loop + setup (expliquer le concept de fonction):**
+1. **Expliquer le concept de fonction:**
 
-	1.	Expliquer ce que c'est une fonction (bloc ou on defini un ensemble d'insctruction qui peux etre executer par la machine si on l'appel (appeller une fonction est une insctruction))
-	2. `setup()` --> Cette fonctions sert à setup l'hardware de la console, elle peux aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme)
+	1.	Expliquer ce que c'est une fonction (bloc ou on defini un ensemble d'insctruction qui peux etre executé par la machine si on l'appel (appeller une fonction est une insctruction))
+	2. `setup()` --> Cette fonction sert à setup l'hardware de la console, elle peut aussi servir à paramatrer des variables avant de lancer le jeu (en gros cette fonction set tout ce qu'il faut set pour le bon fonctionnement du programme et de la console)
 	3. `loop()` --> Cette fonction sera le code executer par la console en boucle ce qui permet de faire de l'affichage et bien d'autre choses comme des robots, des jeux....
 	4. Expliquer ce que c'est un include (sert à charger du code dans un autre fichier pour le reutiliser)
-	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux (librairi == bibli ou on se sert uniquement des titres des livres (les functions)) (exemple livre de magie + sort + appel du sort)
+	5. Montre le `game.hpp` qui include `GameBuino.h` (la lib de la console) + tout mes .h pour le jeux (librairi == bibli ou on se sert uniquement des titres des livres (les functions)) (exemple livre de magie + sort + appel du sort) [optionnel]
 
 
 2. **Je commence a coder.com:**
