@@ -1,7 +1,7 @@
-# todo:
+# todo (Delay):
 1. cle gamebuino + arduino * 4
 
-# step workshop 30 min:
+### step workshop 30 min:
 
 1. Expliquer `loop()` et `setup()`
 2. Montre `image.hpp` + pixel art tuto
@@ -10,7 +10,7 @@
 6. Coder les events (expliquation des if + else if)
 7. Enjoy and play
 
-# detail step workshop:
+### detail step workshop:
 
 0.	**Présentions animateur enfants:**
 
