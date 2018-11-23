@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   character.cpp                                    .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/21 11:45:24 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 09:55:25 by delay       ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cpieri <cpieri@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/21 11:45:24 by delay             #+#    #+#             */
+/*   Updated: 2018/11/23 10:32:44 by cpieri           ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #include "./includes/character.hpp"
 
@@ -49,7 +49,7 @@ void	Character::jump(void)
 	{
 		this->_is_run = true;
 		this->_is_move_back = true;
-		this->_pos.getY() -= 15;
+		this->_pos.getY() -= 18;
 		this->_is_fall = false;
 	}
 	return ;
